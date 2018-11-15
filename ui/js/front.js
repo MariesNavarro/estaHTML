@@ -35,7 +35,7 @@ var initFront = (function(){
     }
   }
   //eventos buttons
-  setEventButtons("#obtenCupon", seqCupon);
+  setEventButtons("#obtenCupon", generandoC);
 })();
 var ct = 0;
 function generateSeq(len,url, ext){
@@ -101,12 +101,14 @@ function setEventButtons(bt, fun){
     obtenCupon.addEventListener("click", fun);
   }
 };
-function seqCupon(){
+function generandoC(){
   var obten = _("#obten"),
-      generando = _("#generando");
+      generando = _("#generando"),
+      icono = _("#generandoIcono");
   obten.style.opacity = "0";
   setTimeout(function(){
     obten.style.display = "none";
+    icono.setAttribute("class","rotating");
     generando.setAttribute("class", "flexDisplay trans5");
     setTimeout(function(){
       generando.style.opacity = "1";
