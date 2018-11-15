@@ -150,3 +150,11 @@ window.onresize = function(){
     }
   }
 };
+
+svgPath();
+function svgPath(){
+  var fig2 = _("#fig2");
+  console.log(fig2);
+var total = fig2.getTotalLength();
+console.log(total);
+}

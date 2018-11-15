@@ -395,3 +395,18 @@ footer{ border: 1px solid purple; }
 #main>#producto{
   border: 1px solid red;
 }
+
+.path {
+  stroke-dasharray: 258.8316955566406;
+  stroke-dashoffset: 258.8316955566406;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 258.8316955566406;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
