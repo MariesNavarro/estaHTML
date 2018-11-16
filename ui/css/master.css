@@ -58,7 +58,6 @@ nav{
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
-  opacity: 0;
 }
 nav>a{
   display: block;
@@ -79,7 +78,34 @@ nav>img{ height: 35px; }
 #textura{
   width: 100%;
   height: 100%;
-  background: red;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+#cuponwrap{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  background: #fff;
+}
+#cupon1{
+  width: 100%;
+  height: 85%;
+  background-image: url('../img/cupon.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 90%;
 }
 #scratch{ z-index: 14; }
 #scratch>#left_top, #scratch>#right_bottom{
@@ -137,7 +163,7 @@ nav>img{ height: 35px; }
 #main>#producto>#botella{ width: 40%; }
 #main>#producto>#info{ width: 50%; }
 #main>#producto>#botella{
-  background-image: url('../img/pet-pepsi-80.jpg');
+  background-image: url('../img/pet-pepsi-80.png');
   background-size: auto 80%;
   background-repeat: no-repeat;
   background-position: 98% center;
@@ -190,7 +216,6 @@ nav>img{ height: 35px; }
   -ms-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
-  /* opacity: 0; */
 }
 #info>#generando>h4{ font-size: 0.8rem; text-align: center; line-height: 1; }
 #info>#generando>h5{ font-size: 0.6rem; }
@@ -392,21 +417,64 @@ footer{ border: 1px solid purple; }
 #generando{ border: 1px solid red; } */
 /* #mensaje{ border: 1px solid red; } */
 
-#main>#producto{
-  border: 1px solid red;
+.none{ opacity: 0; }
+.st1{fill:#fff;}
+.st2,.st3,.st4,.st5,.st6{fill:none;stroke-linecap:round;stroke-width:6px;}
+.st2{stroke:#0e66c0;}
+.st2,.st3,.st5{stroke-miterlimit:10;}
+.st3,.st6{stroke:#022243;}
+.st4,.st5{stroke:#043d75;}
+.st4,.st6{stroke-linejoin:round;}
+
+.wiggle1{
+  stroke-dasharray: 138.24966430664062;
+  stroke-dashoffset: 138.24966430664062;
+  animation:wiggle1 0.5s ease-out forwards;
+}
+.wiggle2{
+  stroke-dasharray: 106.82929229736328;
+  stroke-dashoffset: 106.82929229736328;
+  animation:wiggle2 0.5s ease-out 0.3s forwards;
+}
+.wiggle3{
+  stroke-dasharray: 120.76139831542969;
+  stroke-dashoffset: 120.76139831542969;
+  animation:wiggle3 0.5s ease-out 0.2s forwards;
+}
+.wiggle4{
+  stroke-dasharray: 86.41710662841797;
+  stroke-dashoffset: 86.41710662841797;
+  animation:wiggle4 0.5s ease-out 0.9s forwards;
+}
+.wiggle5{
+  stroke-dasharray: 131.9656219482422;
+  stroke-dashoffset: 131.9656219482422;
+  animation:wiggle5 0.5s ease-out 0.7s forwards;
 }
 
-.path {
-  stroke-dasharray: 258.8316955566406;
-  stroke-dashoffset: 258.8316955566406;
-  animation: dash 5s linear alternate infinite;
+/*  */
+@keyframes wiggle1 {
+  0%{ stroke-dashoffset: 138.24966430664062; }
+  80%{ opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
 }
-
-@keyframes dash {
-  from {
-    stroke-dashoffset: 258.8316955566406;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+@keyframes wiggle2 {
+  0 { stroke-dashoffset: 106.82929229736328; }
+  80%{ opacity: 1; }
+  100%{ stroke-dashoffset: 0; opacity: 0; }
+}
+@keyframes wiggle3 {
+  0 { stroke-dashoffset: 120.76139831542969; }
+  70%{ opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+@keyframes wiggle4 {
+  0 { stroke-dashoffset: 86.41710662841797; }
+  80%{ opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+@keyframes wiggle5 {
+  0 { stroke-dashoffset: 131.9656219482422; }
+  80%{ opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
 }

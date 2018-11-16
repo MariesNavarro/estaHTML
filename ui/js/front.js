@@ -93,6 +93,9 @@ function loadSeq(arr, url,len, ext){
   arr[i].send();
   }
 };
+
+
+
 function setEventButtons(bt, fun){
   var bt = _(bt);
   if(isMobile){
@@ -105,17 +108,18 @@ function generandoC(){
   var obten = _("#obten"),
       generando = _("#generando"),
       icono = _("#generandoIcono");
-  obten.style.opacity = "0";
+      obten.style.opacity = "0";
   setTimeout(function(){
     obten.style.display = "none";
     icono.setAttribute("class","rotating");
     generando.setAttribute("class", "flexDisplay trans5");
     setTimeout(function(){
       generando.style.opacity = "1";
+      pathM();
     },500);
   },500);
-  console.log("Se lanza la animacion de generando cupon");
 }
+
 // Window Functions
 function preventLandscape(){
   var wr = _('#preventLandscape');
@@ -150,11 +154,10 @@ window.onresize = function(){
     }
   }
 };
-
-svgPath();
-function svgPath(){
-  var fig2 = _("#fig2");
-  console.log(fig2);
-var total = fig2.getTotalLength();
-console.log(total);
+var wiggles = ["path st2 wiggle1", "path st3 wiggle2", "path st4 wiggle5", "path st2 wiggle4", "path st2 wiggle3"];
+function pathM(){
+  var path = __(".path");
+  for (var i = 0; i < path.length; i++) {
+    path[i].setAttribute("class", wiggles[i]);
+  }
 }
