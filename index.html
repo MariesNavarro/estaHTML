@@ -134,26 +134,25 @@ Author: Oet Capital
       <div id="producto" class="flexDisplay trans5">
         <div id="botella"></div>
         <div id="info" class="flexDisplay">
-          <div id="obten" class="trans5">
-            <h3>Precio Especial</h3>
-            <img src="ui/img/precio.svg">
-            <a id="obtenCupon" role="button" class="buttonPepsi trans5">
-              <p>Obtén tu Cupón</p>
-            </a>
-          </div>
-          <div id="generando" class="dislplayNone trans5">
-            <h4>Esta Es La Pepsi <br> De Cada Generación</h4>
-            <div>
-              <p>Generando Cupón</p>
-              <img id="generandoIcono" src="ui/img/generando.svg">
+          <div id="obten" class="flexDisplay trans5">
+            <div id="obtenInfo" class="flexDisplay trans5">
+              <h3>Precio Especial</h3>
+              <img src="ui/img/precio.svg">
             </div>
-            <h5>Esta También Es Tu Pepsi <img src="ui/img/logo-pepsi-80.svg" width="13"></h5>
+            <div id="generandoInfo" class="dislplayNone">
+              <h4>Esta Es La Pepsi <br> De Cada Generación</h4>
+              <p>Generando Cupón</p>
+            </div>
+            <div id="obtenCupon" class="buttonPepsi trans5"></div>
+            <div id="campanaMovil">
+              <h5>Esta También Es Tu Pepsi <img src="ui/img/logo-pepsi-80.svg" width="13"></h5>
+            </div>
           </div>
         </div>
       </div>
       <div id="cuponwrap" class="dislplayNone">
         <div id="cupon1"></div>
-        <a id="download" role="button" class="buttonPepsi trans5">
+        <a id="download" role="button" class="buttonGuardado trans5">
           <p>Guarda Tu Cupón</p>
         </a>
       </div>
@@ -196,5 +195,6 @@ Author: Oet Capital
       <p>Por favor incrementa el tamaño de tu pantalla</p>
     </div>
   </body>
+  <script src="ui/js/lottie.js" charset="utf-8"></script>
   <script src="ui/js/front.js"></script>
 </html>

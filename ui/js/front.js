@@ -94,30 +94,38 @@ function loadSeq(arr, url,len, ext){
   }
 };
 
-
-
 function setEventButtons(bt, fun){
   var bt = _(bt);
   if(isMobile){
-    obtenCupon.addEventListener("ontouchstart", fun);
+    obtenCupon.addEventListener("touchstart", fun);
   } else {
     obtenCupon.addEventListener("click", fun);
   }
 };
+function unsettledEventButtons(bt, fun){
+  var bt = _(bt);
+  if(isMobile){
+    obtenCupon.removeEventListener("touchstart", fun);
+  } else {
+    obtenCupon.removeEventListener("click", fun);
+  }
+};
+
 function generandoC(){
-  var obten = _("#obten"),
-      generando = _("#generando"),
-      icono = _("#generandoIcono");
-      obten.style.opacity = "0";
+  console.log("From generando");
+  unsettledEventButtons("#obtenCupon", generandoC);
+  var obtenInfo = _("#obtenInfo"),
+      generandoInfo = _("#generandoInfo");
+  obtenInfo.style.opacity = "0";
   setTimeout(function(){
-    obten.style.display = "none";
-    icono.setAttribute("class","rotating");
-    generando.setAttribute("class", "flexDisplay trans5");
+    obtenInfo.setAttribute("class", "dislplayNone");
+    generandoInfo.setAttribute("class", "flexDisplay trans5");
     setTimeout(function(){
-      generando.style.opacity = "1";
+      generandoInfo.style.opacity = "1";
       pathM();
     },500);
   },500);
+  obtenerAni.play();
 }
 
 // Window Functions
@@ -160,4 +168,25 @@ function pathM(){
   for (var i = 0; i < path.length; i++) {
     path[i].setAttribute("class", wiggles[i]);
   }
+}
+
+
+var obtenerAniData = {
+  container: document.getElementById('obtenCupon'),
+  render: "svg",
+  loop: false,
+  autoplay: false,
+  path: "ui/js/button.json"
+}
+var obtenerAni = bodymovin.loadAnimation(obtenerAniData);
+
+obtenerAni.onComplete = function(){
+  var cupon = _("#cuponwrap"),
+  producto  = _("#producto");
+  cupon.setAttribute("class", "flexDisplay trans5");
+  producto.style.opacity = "0";
+  setTimeout(function(){
+    producto.setAttribute("class", "dislplayNone");
+    cupon.style.opacity = "1";
+  });
 }

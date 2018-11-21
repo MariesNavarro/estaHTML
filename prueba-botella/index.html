@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Botella</title>
+	<style type="text/css">
+		#bm{
+			width: 250px;
+			border:1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="bm"></div>
+<script type="text/javascript" src="lottie.js"></script>
+<script type="text/javascript">
+	var ani = bodymovin.loadAnimation({
+		container: document.getElementById("bm"),
+		render: "svg",
+		loop: true,
+		autoplay: true,
+		path: "botella.json"
+	});
+</script>
+</body>
+</html>

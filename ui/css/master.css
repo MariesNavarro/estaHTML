@@ -98,6 +98,7 @@ nav>img{ height: 35px; }
   -o-align-items: center;
   align-items: center;
   background: #fff;
+  opacity: 0;
 }
 #cupon1{
   width: 100%;
@@ -141,13 +142,6 @@ nav>img{ height: 35px; }
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 960px) {
-#scratch>#center{
-  width: 100vw;
-  left: 0;
-}
-.seqContainer{ background-size: 70% 100%; }
-}
 #main, #mensaje{
   position: absolute;
   width: 100vw;
@@ -170,21 +164,9 @@ nav>img{ height: 35px; }
 }
 .buttonPepsi{
   cursor: pointer;
-  display: block;
-  width: 140px;
-  height: 35px;
-  line-height: 37px;
   margin: 0 auto;
-  background: #0141A3;
-  color: #fff;
-  text-align: center;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  -webkit-box-shadow:inset 3px 3px 15px 0px rgba(0,0,0,0.49), 3px 3px 3px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow:3px 3px 15px 0px rgba(0,0,0,0.49), 3px 3px 3px 0px rgba(0,0,0,0.3);
-  box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.49), 3px 3px 3px 0px rgba(0,0,0,0.3);
+  width: 140px;
 }
-.buttonPepsi>p{ font-size: 0.75rem; }
 .buttonPepsi:hover{
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -192,6 +174,28 @@ nav>img{ height: 35px; }
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
+.buttonGuardado{
+  cursor: pointer;
+  display: block;
+  width: 140px;
+  height: 35px;
+  line-height: 37px;
+  margin: 0 auto;
+  background: #004990;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 30px;
+}
+.buttonGuardado>p{ font-size: 0.75rem; }
+.buttonGuardado:hover{
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#obtenCupon{ margin-top: -30px; }
 #info{
   -webkit-align-items: center;
   -moz-align-items: center;
@@ -201,14 +205,7 @@ nav>img{ height: 35px; }
 }
 #info>#obten{
   width: 95%;
-  height: 50%;
-  margin-left: 2%;
-  text-align: center;
-}
-#info>#obten>img{ width:100px; }
-#info>#obten>h3{ font-size: 0.883em; }
-#info>#generando{
-  width: 95%;
+  height: 80%;
   margin-left: 2%;
   text-align: center;
   -webkit-flex-direction: column;
@@ -216,15 +213,47 @@ nav>img{ height: 35px; }
   -ms-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
 }
-#info>#generando>h4{ font-size: 0.8rem; text-align: center; line-height: 1; }
-#info>#generando>h5{ font-size: 0.6rem; }
-#info>#generando>div{
-  text-align: center;
-  margin: 10px auto;
+#info>#obten>#campanaMovil{
+  opacity: 1;
+  font-size: 0.6rem;
 }
-#info>#generando>div>p{ font-size: 0.7rem; }
-#info>#generando>div>img{ width: 80px; }
+#obtenInfo, #generandoInfo{
+  height: 40%;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+#obtenInfo{
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+#obtenInfo>h3{ font-size: 0.883em; }
+#obtenInfo>img{ width:100px; }
+#generandoInfo{
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  opacity: 0;
+}
+#generandoInfo>h4, #generandoInfo>p{ font-size: 0.8rem; }
 #mensaje{
   top: 40px !important;
   height: 60%;
@@ -243,6 +272,7 @@ nav>img{ height: 35px; }
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
+  opacity: 0;
 }
 #mensaje>img{ width: 100px; }
 #mensaje>p{
@@ -284,9 +314,13 @@ footer>h6{
   font-family: 'Sofia Regular', sans-serif;
   font-size: 0.583em;
 }
-
 /* DESKTOP */
 @media (min-width: 960px) {
+  #scratch>#center{
+    width: 100vw;
+    left: 0;
+  }
+  .seqContainer{ background-size: 70% 100%; }
   #scratch>#right_bottom,#scratch>#left_top{
     background-repeat: repeat-y;
     background-size: 100%;
@@ -299,7 +333,6 @@ footer>h6{
   #scratch>#right_bottom{
     background-image: url('../img/rip-right.png');
   }
-
   #main, #mensaje{
     width: 40vw;
     height: calc(100vh - 114.667px);
@@ -310,28 +343,17 @@ footer>h6{
     width: 50%;
     height: 100%;
   }
-  .buttonPepsi{
-    width: 160px;
-    height: 40px;
-    line-height: 44px;
-  }
-  .buttonPepsi>p{ font-size: 0.883rem; }
-  #info>#obten>h3{ font-size: 1.117em; }
-  #info>#obten>img{ width:160px; }
-  #info>#generando{
-    height: 80%;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -o-justify-content: space-between;
-    justify-content: space-between;
-  }
-  #info>#generando>h4{ font-size: 1.2rem; }
-  #info>#generando>h5{ opacity: 0 }
-  #info>#generando>div>p{ font-size: 1rem; }
-  #info>#generando>div>img{
-    margin: 10px auto;
-    width: 110px; }
+  .buttonPepsi, .buttonGuardado{ width: 180px; }
+  .buttonGuardado{
+    height: 45px;
+    line-height: 48px;
+   }
+  .buttonGuardado>p{ font-size: 0.9rem }
+  #obtenCupon{ margin-top: -110px; }
+  #obtenInfo>h3{ font-size: 1.117em; }
+  #obtenInfo>img{ width:160px; }
+  #generandoInfo>h4, #generandoInfo>p{ font-size: 1rem; }
+  #info>#obten>#campanaMovil{ opacity: 0; }
   #mensaje{ height: 80%; }
   #mensaje>p{ font-size: 1.6rem; }
   #mensaje>img{ width: 140px; }
@@ -382,29 +404,6 @@ footer>h6{
   left: 5vw;
   z-index: 100;
 }
-.rotating {
-  -webkit-animation: rotating 2s linear infinite;
-  -moz-animation: rotating 2s linear infinite;
-  -ms-animation: rotating 2s linear infinite;
-  -o-animation: rotating 2s linear infinite;
-  animation: rotating 2s linear infinite;
-}
-@keyframes rotating {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 /* BORDERS */
 /* nav{ border:1px solid purple; }
 nav>a{ border:1px solid blue; }
@@ -414,9 +413,9 @@ nav>a{ border:1px solid blue; }
 #main>#producto>#botella{ border:1px solid green; }
 #info>#obten{ border:1px solid red;}
 footer{ border: 1px solid purple; }
-#generando{ border: 1px solid red; } */
-/* #mensaje{ border: 1px solid red; } */
-
+#mensaje{ border: 1px solid red; }
+#obtenInfo, #generandoInfo{ border:1px solid red;}
+*/
 .none{ opacity: 0; }
 .st1{fill:#fff;}
 .st2,.st3,.st4,.st5,.st6{fill:none;stroke-linecap:round;stroke-width:6px;}
