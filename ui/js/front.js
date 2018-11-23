@@ -116,6 +116,7 @@ function unsettledEventButtons(bt, fun){
 };
 
 function generandoC(){
+  /* Función que se lanza cuanto el usuario hace clic en el botón */
   unsettledEventButtons("#obtenCupon", generandoC);
   var obtenInfo = _("#obtenInfo"),
       generandoInfo = _("#generandoInfo");
@@ -183,8 +184,6 @@ var botellaAniData = {
 }
 var botellaAni = bodymovin.loadAnimation(botellaAniData);
 
-
-
 var obtenerAniData = {
   container: document.getElementById('obtenCupon'),
   render: "svg",
@@ -195,6 +194,7 @@ var obtenerAniData = {
 var obtenerAni = bodymovin.loadAnimation(obtenerAniData);
 
 obtenerAni.onComplete = function(){
+  /* Ocultar div#producto y mostrar div#cupon */
   var cupon = _("#cuponwrap"),
   producto  = _("#producto");
   cupon.setAttribute("class", "flexDisplay trans5");
@@ -202,5 +202,5 @@ obtenerAni.onComplete = function(){
   setTimeout(function(){
     producto.setAttribute("class", "dislplayNone");
     cupon.style.opacity = "1";
-  });
+  },500);
 }
