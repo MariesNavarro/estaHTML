@@ -1418,10 +1418,8 @@ function loadingCoupon(d){
       arch='ui/img/temp/promoMob-'+d+'.jpg';
     }
     toDataURL(arch, function(dataUrl) {
-
        var dow=_("#download");
        dow.download="cupon.jpg"
-
        dow.href=arch;
        dow.target='_blank';
     });
@@ -1635,3 +1633,15 @@ function toDataURL(url, callback) {
   xhr.send();
 }
 valido();
+
+function mensaje(){
+  var cuponWr = _("#cuponwrap"),
+      mensajeWr = _("#mensaje"),
+      respuesta = _("#resultadoMensaje");
+  cuponWr.style.opacity = "0";
+  mensajeWr.setAttribute("class", "flexDisplay trans5");
+  setTimeout(function(){
+    cuponWr.setAttribute("class", "dislplayNone");
+    mensajeWr.style.opacity = "1";
+  },500);
+}

@@ -80,7 +80,7 @@ Author: Oet Capital
       </div>
       <div id="cuponwrap" class="dislplayNone">
         <div id="cupon1"></div>
-        <a id="download" role="button" class="buttonGuardado trans5">
+        <a id="download" role="button" class="buttonGuardado trans5" onclick="mensaje()">
           <p>Guarda Tu Cupón</p>
         </a>
       </div>
@@ -96,7 +96,7 @@ Author: Oet Capital
     </div>
     <div id="mensaje" class="dislplayNone">
       <img src="ui/img/logo-pepsi-80.svg" width="140">
-      <p>¡TU CUPÓN DE <br>
+      <p id="resultadoMensaje">¡TU CUPÓN DE <br>
       PEPSI HA SIDO <br>
       GUARDADO <br>
       EXITOSAMENTE!</p>
