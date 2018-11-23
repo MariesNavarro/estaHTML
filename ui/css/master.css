@@ -105,8 +105,8 @@ nav>img{ height: 35px; }
   height: 85%;
   background-image: url('../img/cupon.jpg');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto 90%;
+  background-position: center top;
+  background-size: auto 98%;
 }
 #scratch{ z-index: 14; }
 #scratch>#left_top, #scratch>#right_bottom{
@@ -145,7 +145,7 @@ nav>img{ height: 35px; }
 #main, #mensaje{
   position: absolute;
   width: 100vw;
-  height: 60vh;
+  height: 65vh;
   top: 20vh;
   left: 0;
 }
@@ -157,10 +157,12 @@ nav>img{ height: 35px; }
 #main>#producto>#botella{ width: 40%; }
 #main>#producto>#info{ width: 50%; }
 #main>#producto>#botella{
-  background-image: url('../img/pet-pepsi-80.png');
-  background-size: auto 80%;
-  background-repeat: no-repeat;
-  background-position: 98% center;
+  position: relative;
+  height: 80%;
+}
+#main>#producto>#botella>svg{
+  position: absolute;
+  left: 25%;
 }
 .buttonPepsi{
   cursor: pointer;
