@@ -1645,3 +1645,13 @@ function mensaje(){
     mensajeWr.style.opacity = "1";
   },500);
 }
+
+var pepsiAniData = {
+  container: document.getElementById("pepsiAni"),
+  render: "svg",
+  loop: true,
+  autoplay: true,
+  path: "ui/js/pepsi_logo.json"
+}
+
+var pepsiAni = bodymovin.loadAnimation(pepsiAniData);

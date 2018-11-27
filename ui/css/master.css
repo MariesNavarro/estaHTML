@@ -416,8 +416,8 @@ nav>a{ border:1px solid blue; }
 #info>#obten{ border:1px solid red;}
 footer{ border: 1px solid purple; }
 #mensaje{ border: 1px solid red; }
-#obtenInfo, #generandoInfo{ border:1px solid red;}
-*/
+#obtenInfo, #generandoInfo{ border:1px solid red;} */
+
 .none{ opacity: 0; }
 .st1{fill:#fff;}
 .st2,.st3,.st4,.st5,.st6{fill:none;stroke-linecap:round;stroke-width:6px;}

@@ -16,8 +16,9 @@ Author: Oet Capital
     <title>Esta También Es Tu Pepsi | Pepsi México</title>
     <meta name="description" content="El lugar perfecto para encontrar las mejores promociones de toda la línea de Pepsi">
     <link rel="canonical" href="www.estatambienestupepsi.com">
+    <!-- <link rel="stylesheet" href="ui/css/temp.css"> -->
     <style>
-      #loading{position:fixed;top:0;left:0;width:100vw;height:100vh;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;-o-flex-direction:column;flex-direction:column;-webkit-align-items:center;-moz-align-items:center;-ms-align-items:center;-o-align-items:center;align-items:center;-webkit-justify-content:center;-moz-justify-content:center;-ms-justify-content:center;-o-justify-content:center;justify-content:center;z-index:100;background:#fff}#loading>div>img{opacity:0;margin:0 auto 20px;-webkit-animation:fadeIn .7s ease-in .7s forwards;-moz-animation:fadeIn .7s ease-in .7s forwards;-ms-animation:fadeIn .7s ease-in .7s forwards;-o-animation:fadeIn .7s ease-in .7s forwards;animation:fadeIn .7s ease-in .7s forwards}#loading>div>.loader{opacity:0;position:relative;margin:0 auto;width:56px;height:20px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-moz-justify-content:space-between;-ms-justify-content:space-between;-o-justify-content:space-between;justify-content:space-between;-webkit-animation:fadeIn .7s ease-in 1.2s forwards;-moz-animation:fadeIn .7s ease-in 1.2s forwards;-ms-animation:fadeIn .7s ease-in 1.2s forwards;-o-animation:fadeIn .7s ease-in 1.2s forwards;animation:fadeIn .7s ease-in 1.2s forwards}#loading>div>.loader>span{display:block;width:4px;background:#184895;height:100%;-webkit-animation:loaderSpan 1.5s infinite;-moz-animation:loaderSpan 1.5s infinite;-ms-animation:loaderSpan 1.5s infinite;-o-animation:loaderSpan 1.5s infinite;animation:loaderSpan 1.5s infinite}#loading>div>.loader>span:first-child{-webkit-animation-delay:1s;-moz-animation-delay:1s;-ms-animation-delay:1s;-o-animation-delay:1s;animation-delay:1s}#loading>div>.loader>span:nth-child(2){-webkit-animation-delay:.8s;-moz-animation-delay:.8s;-ms-animation-delay:.8s;-o-animation-delay:.8s;animation-delay:.8s}#loading>div>.loader>span:nth-child(3){-webkit-animation-delay:.6s;-moz-animation-delay:.6s;-ms-animation-delay:.6s;-o-animation-delay:.6s;animation-delay:.6s}#loading>div>.loader>span:nth-child(4){-webkit-animation-delay:.4s;-moz-animation-delay:.4s;-ms-animation-delay:.4s;-o-animation-delay:.4s;animation-delay:.4s}#loading>div>.loader>span:last-child{-webkit-animation-delay:.2s;-moz-animation-delay:.2s;-ms-animation-delay:.2s;-o-animation-delay:.2s;animation-delay:.2s}
+      #loading{position:fixed;top:0;left:0;width:100vw;height:100vh;-webkit-flex-direction:column;-moz-flex-direction:column;-ms-flex-direction:column;-o-flex-direction:column;flex-direction:column;-webkit-align-items:center;-moz-align-items:center;-ms-align-items:center;-o-align-items:center;align-items:center;-webkit-justify-content:center;-moz-justify-content:center;-ms-justify-content:center;-o-justify-content:center;justify-content:center;z-index:100;background:#fff}#loading>div>#pepsiAni{width:160px;height:160px;opacity:0;-webkit-animation:fadeIn 1s ease 1s forwards;-moz-animation:fadeIn 1s ease 1s forwards;-ms-animation:fadeIn 1s ease 1s forwards;-o-animation:fadeIn 1s ease 1s forwards;animation:fadeIn 1s ease 1s forwards}
     </style>
     <!-- INSERTAR AQUI -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="ui/fav/apple-touch-icon-57x57.png" />
@@ -43,9 +44,7 @@ Author: Oet Capital
   <body>
     <div id="loading" class="standarWindow trans5 flexDisplay">
       <div>
-        <img src="ui/img/logo-pepsi-80.svg" alt="Logotipo Pepsi" width="160" height="160">
-        <div class="loader flexDisplay rot180"> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
-        <div class="loader flexDisplay mirror"> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
+        <div id="pepsiAni" class="trans5"></div>
       </div>
     </div>
     <div id="scratch" class="standarWindow">

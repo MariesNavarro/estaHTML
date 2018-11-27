@@ -1,0 +1,34 @@
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+	z-index: 100;
+	background: #fff;
+}
+#loading>div>#pepsiAni{
+	width: 160px;
+	height: 160px;
+	opacity: 0;
+	-webkit-animation: fadeIn 1s ease 1s forwards;
+	-moz-animation: fadeIn 1s ease 1s forwards;
+	-ms-animation: fadeIn 1s ease 1s forwards;
+	-o-animation: fadeIn 1s ease 1s forwards;
+	animation: fadeIn 1s ease 1s forwards;
+}
