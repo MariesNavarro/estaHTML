@@ -1388,7 +1388,7 @@ function ValidateDate(param1) {
       else
       {
 
-        $('#index').html(data).fadeIn();
+        $('#producto').html(data).fadeIn();
 
       }
     }
