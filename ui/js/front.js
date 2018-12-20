@@ -1387,8 +1387,13 @@ function ValidateDate(param1) {
       }
       else
       {
-
-        $('#producto').html(data).fadeIn();
+        if(data=="redirect")
+        {
+          window.location.href = "index-agotado.php";
+        }
+        else {
+            $('#producto').html(data).fadeIn();
+        }
 
       }
     }
@@ -1632,7 +1637,14 @@ function toDataURL(url, callback) {
   xhr.responseType = 'blob';
   xhr.send();
 }
-valido();
+if(window.location.href=='http://dev.estatambienestupepsi.com/index-agotado.php')
+{
+  initFront();
+}
+else {
+  valido();
+}
+
 
 function mensaje(){
   var cuponWr = _("#cuponwrap"),

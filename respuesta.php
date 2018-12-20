@@ -72,12 +72,7 @@
 
       }
       else {  // ya finalizo
-      echo '  <div id="terminado" class="flexDisplay">
-          <p>
-            La promoción ha terminado. <br>
-            Gracias por participar.
-          </p>
-        </div>';
+      echo 'redirect';
     }
   }
 }
