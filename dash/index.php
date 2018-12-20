@@ -12,7 +12,7 @@ Esta También Es Tu Pepsi v1
     <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0000, minimum-scale=1.0000, maximum-scale=1.0000, user-scalable=no">
     <title>Dashboard | Esta También Es Tu Pepsi | Pepsi México</title>
-    <link rel="stylesheet" href="../ui/css/master.css">
+    <link rel="stylesheet" href="../ui/css/master1.css">
     <link rel="stylesheet" href="../ui/css/dash.css">
     <link rel="canonical" href="www.estatambienestupepsi.com">
     <link rel="apple-touch-icon" sizes="180x180" href="../ui/fav/apple-touch-icon.png">
